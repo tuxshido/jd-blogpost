@@ -1,0 +1,29 @@
+
+    {% extends 'base.html' %}
+    {% block content %}
+    <!-- Page Header -->
+    <header>
+      <canvas id="canv"></canvas>
+        <!-- <div class="landingTitle"> -->
+        <h1 class="landingHtwo">{{ post.title }}</h1>
+        <h3 class="landingHthree">{{ post.subtitle }} by {{ post.author }}
+          on {{ post.date_posted.strftime('%B %d, %Y') }}</h3>
+        <!-- </div> -->
+      
+    </header>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <h1>{{ post.title }}</h1>
+          <div class="col-lg-8 col-md-10 mx-auto">
+            {{ post.content|safe }}
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+    <script src="{{url_for('static',filename='takeTheGreenPill.js')}}"></script>
+    {% endblock %}
+    
