@@ -9,3 +9,4 @@ Video link here: https://youtu.be/XHGpPCYmPvI
  # Info
  
  It is a simple application made in flask a python framework. It has covered topics such as Database Modelling and Routing.
+# jd-blogpost
