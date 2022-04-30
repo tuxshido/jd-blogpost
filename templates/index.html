@@ -11,22 +11,30 @@
         <!-- </div> -->
       
     </header>
-
+    <br>
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-9 col-md-10 mx-auto">
+          <form name="searchForm" id="searchForm" method="POST" action="{{ url_for('search') }}" novalidate>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend rounded">
+                <button type="submit" class="btn btn-outline-dark" style="color:chartreuse">Search</button>
+              </div>
+              <input type="text" class="inputIndex" placeholder="Enter a word or tag" placeholder="Searchword" name="searchword" id="searchword" required >
+            </div class=radioDiv>
+            <input type="radio" class="radioBtn" name="searchby" value="title" checked> <span class="radioLabel">Search inside the title</span> <br>
+            <input type="radio" class="radioBtn" name="searchby" value="tag"> <span class="radioLabel">Search inside the tags</span>
+          </form>
         {% for post in posts %}
-          <div class="post-preview">
+          <div class="cardForPost post-preview rounded">
             <a href="{{ url_for('post', post_id=post.id) }}">
-              <h2 class="post-title">
+              <h3 class="post-title text-light">
                 {{ post.title }}
-              </h2>
-              <h3 class="post-subtitle">
-                {{ post.subtitle }}
               </h3>
             </a>
-            <p class="post-meta">Posted by {{ post.author }} on {{ post.date_posted.strftime('%B %d, %Y') }}</p>
+            <p class="post-meta text-light">Posted by <strong style="color:chartreuse">{{ post.author }}</strong>
+               on {{ post.date_posted.strftime('%B %d, %Y') }}, tags : <strong style="color:chartreuse">{{ post.tag }}</strong></p>
           </div>
           {% endfor %}
           <hr>

@@ -55,25 +55,43 @@ form .form-group:first-child .floating-label-form-group{border-top:1px solid #ee
 .btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{border-color:#0085a1;background-color:#0085a1}
 .btn-primary .badge{color:#0085a1;background-color:#fff}.btn-lg{font-size:16px;padding:25px 35px}
 .btn-default:focus,.btn-default:hover{color:#fff;border:1px solid #0085a1;background-color:#0085a1}
+body {
+  background-color: black;
+}
+
 header {
   position:relative;
 }
-/* #canv {
-    position:absolute;
-    top: 0;
-    left:0;
-    z-index: -10;
-} */
-/* .landingTitle {
-    position:absolute;
-    top: 0;
-    left: 0;
-  width: 100%;
-  height: 250px;
-  text-align: center;
-  z-index: 100;
-  color: greenyellow;
-} */
+
+.inputIndex {
+  color: aliceblue;
+  width: 500px;
+  padding-left: 10px;
+  background-color: black;
+  border-radius: 0 1em 1em 0;
+  border: solid 1px gray;
+}
+
+.inputIndex::selection, .inputIndex:hover, .inputIndex:focus {
+  background-color: #111;
+  outline: none !important;
+}
+
+.radioBtn {
+  accent-color: chartreuse;
+}
+
+.radioLabel {
+  color: aliceblue;
+}
+
+.cardForPost {
+  background-color:#111;
+}
+
+.form-control {
+  padding: 10px !important;
+}
 
 .landingHtwo, .landingHthree {  
   position:absolute;

@@ -14,16 +14,12 @@ content		TEXT
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
 
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: blogpost.date_posted
-[SQL: SELECT blogpost.id AS blogpost_id, blogpost.title AS blogpost_title, blogpost.subtitle AS blogpost_subtitle, blogpost.author AS blogpost_author, blogpost.date_posted AS blogpost_date_posted, blogpost.content AS blogpost_content 
-FROM blogpost ORDER BY blogpost.date_posted DESC]
-
 
 .schema blogpost
 CREATE TABLE blogpost (
 	id INTEGER NOT NULL,
 	title VARCHAR(50),
-	subtitle VARCHAR(50),
+	tag VARCHAR(50),
 	author VARCHAR(20),
 	date_posted DATETIME,
 	content TEXT,

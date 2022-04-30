@@ -6,18 +6,21 @@
       <canvas id="canv"></canvas>
         <!-- <div class="landingTitle"> -->
         <h1 class="landingHtwo">{{ post.title }}</h1>
-        <h3 class="landingHthree">{{ post.subtitle }} by {{ post.author }}
+        <h3 class="landingHthree">by {{ post.author }}
           on {{ post.date_posted.strftime('%B %d, %Y') }}</h3>
         <!-- </div> -->
       
     </header>
     <!-- Post Content -->
+      <br>
     <article>
-      <div class="container">
-        <div class="row">
-          <h1>{{ post.title }}</h1>
-          <div class="col-lg-8 col-md-10 mx-auto">
-            {{ post.content|safe }}
+      <div class="container text-light">
+        <div class="cardForPost rounded row col-lg-9 col-md-10 mx-auto py-4"> 
+          <h1 style="color:chartreuse">
+            {{ post.title }}
+          </h1>
+          <div class="col-lg-11 col-md-11 mx-auto">
+            <br>{{ post.content|safe }}
           </div>
         </div>
       </div>
